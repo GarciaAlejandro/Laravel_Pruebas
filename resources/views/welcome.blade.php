@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="https://laraveltests.herokuapp.com/blog">Página alterna</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laraveltests.herokuapp.com/Novia">Sorpresa</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>

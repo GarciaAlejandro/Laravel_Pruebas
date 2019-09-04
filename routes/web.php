@@ -36,6 +36,7 @@ Route::get('/', function () {
 |   Opción 2 - parametro 1 = '/test' parametro 2 = 'test.php'
 |   Route::view('test','test');
 */
+Route::view('Novia', 'Novia');
 Route::view('fotos', 'fotos', ['numero' => 10])->name('foto');
 Route::view('blog','blog')->name('noticias');
 Route::get('nosotros/{nombre?}', function($nombre =null){
