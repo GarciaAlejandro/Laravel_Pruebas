@@ -34,6 +34,7 @@
 <a href="{{ route('nosotros', $integrante) }}" class="h4 text-danger"> {{$integrante}}</a><br>
     @endforeach
      
+    
     <!-- La variable es creada cuando se presiona un nombre --> 
     @if(!empty($nombre))
         <!-- Se ejecuta si se pasa un nombre-->

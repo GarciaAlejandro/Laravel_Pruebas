@@ -14,9 +14,7 @@
 | 127.0.0.1:8000/fotografias 
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@inicio');
 
 /* 
 |
@@ -36,13 +34,10 @@ Route::get('/', function () {
 |   Opción 2 - parametro 1 = '/test' parametro 2 = 'test.php'
 |   Route::view('test','test');
 */
-Route::view('Novia', 'Novia');
-Route::view('fotos', 'fotos', ['numero' => 10])->name('foto');
-Route::view('blog','blog')->name('noticias');
-Route::get('nosotros/{nombre?}', function($nombre =null){
-    //Array de equipo (Database)
-    $equipo = ['Alejandro', 'García', 'Cetina'];
+Route::get('Novia', 'PagesController@Novia');
 
-    // mandar array asociativo, toma el nombre y se asocia el array equipo
-    return view('nosotros', ['equipo'=> $equipo, 'nombre' => $nombre]);
-})->name('nosotros');
+Route::get('fotos', 'PagesController@fotos', ['numero' => 10])->name('foto');
+
+Route::get('blog','PagesController@noticias')->name('noticias');
+
+Route::get('nosotros/{nombre?}', 'PagesController@nosotros')->name('nosotros');
