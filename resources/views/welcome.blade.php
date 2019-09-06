@@ -21,7 +21,7 @@ background: #CECECE;
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#id</th>
+                    <th scope="col">id</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripción</th>
                   </tr>
