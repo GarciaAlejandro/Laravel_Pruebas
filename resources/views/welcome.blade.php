@@ -7,13 +7,41 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<style>
+body{
+background: #CECECE;
+}
+</style>
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class ="container my-4" > 
-        <h1 class = "display-4"> Notas </h1>
-    </div> 
+      <div class="container my-4">
+            <h1 class="display-4">Notas</h1>
+ 
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @foreach ($notas as $nota)
+                        
+         
+                  <tr>
+                  <th scope="row">{{$nota->id}}</th>
+                    <td>{{$nota->nombre}}</td>
+                    <td>{{$nota->descripción}}</td>
+                    <td></td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+
+      </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

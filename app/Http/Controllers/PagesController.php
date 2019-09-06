@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// Invoca los modelos creados (Nota.php)
+use App;
 
 class PagesController extends Controller
 {
     public function inicio(){
-        return view('welcome');
+        // Invoca todos los elementos de la DB
+        $notas = App\Nota::all();
+        return view('welcome', compact('notas'));
     }
 
     public function Novia(){
