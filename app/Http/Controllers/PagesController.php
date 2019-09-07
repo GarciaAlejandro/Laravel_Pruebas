@@ -10,8 +10,9 @@ class PagesController extends Controller
 {
     public function inicio(){
         // Invoca todos los elementos de la DB
-        $notas = App\Nota::all();
-        return view('welcome', compact('notas'));
+       // $notas = App\Nota::all();
+        //return view('welcome', compact('notas'));
+        return view('welcome');
     }
 
     public function Novia(){
