@@ -27,7 +27,7 @@ background: #CECECE;
                   </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($notas as $nota)
+                   @foreach ($notas as $nota)
                         
          
                   <tr>
@@ -36,7 +36,7 @@ background: #CECECE;
                     <td>{{$nota->descripción}}</td>
                     <td></td>
                   </tr>
-                  @endforeach --}}
+                  @endforeach 
                 </tbody>
               </table>
 
