@@ -14,7 +14,9 @@
 | 127.0.0.1:8000/fotografias 
 */
 
-Route::get('/', 'PagesController@inicio');
+Route::get('/', 'PagesController@inicio')->name('inicio');
+
+Route::get('/detalle/{id}', 'PagesController@detalle')->name('notas.detalle');
 
 /* 
 |
@@ -41,3 +43,5 @@ Route::get('fotos', 'PagesController@fotos', ['numero' => 10])->name('foto');
 Route::get('blog','PagesController@noticias')->name('noticias');
 
 Route::get('nosotros/{nombre?}', 'PagesController@nosotros')->name('nosotros');
+
+

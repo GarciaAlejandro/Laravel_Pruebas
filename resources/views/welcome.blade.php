@@ -32,7 +32,11 @@ background: #CECECE;
          
                   <tr>
                   <th scope="row">{{$nota->id}}</th>
-                    <td>{{$nota->nombre}}</td>
+                    <td>
+                      <a href=" {{ Route('notas.detalle'), $nota }} "> 
+                      {{$nota->nombre}}
+                      </a>
+                    </td>
                     <td>{{$nota->descripción}}</td>
                     <td></td>
                   </tr>
