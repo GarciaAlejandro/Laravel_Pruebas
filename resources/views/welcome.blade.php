@@ -17,11 +17,27 @@ background: #CECECE;
   <body>
       <div class="container my-4">
             <h1 class="display-4">Notas</h1>
- 
+
+            <!-- Aparición de bloque exitoso solamente cuando se presiona agregar -->
+              @if(session('mensaje'))
+                <div class="alert alert-success">
+                  {{session('mensaje')}}
+                </div>
+              @endif
+
+            <form action="{{ route('notas.crear') }}" method="POST">
+                @csrf
+              <!-- *NECESARIO name-->
+              <input type="text"  name="nombre" placeholder="Nombre" class="form-control mb-2">
+              <input type="text"  name="descripción" placeholder="Descripción" class="form-control mb-2">
+              <!-- * Necesario type submit, al presionar ejecuta action=" "-->
+              <button class="btn btn-primary btn-block" type="submit">Agregar Nota</button>
+            </form>
+
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">id</th>
+                   <!-- <th scope="col">id</th> -->
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripción</th>
                   </tr>
@@ -31,14 +47,23 @@ background: #CECECE;
                         
          
                   <tr>
-                  <th scope="row">{{$nota->id}}</th>
+                 <!-- <th scope="row">{{$nota->id}}</th>-->
                     <td>
-                      <a href=" {{ Route('notas.detalle'), $nota }} "> 
+                      <a href=" {{ route('notas.detalle',$nota)  }} "> 
                       {{$nota->nombre}}
                       </a>
                     </td>
+
+
                     <td>{{$nota->descripción}}</td>
                     <td></td>
+                    <td>
+                        <form action="{{route('notas.eliminar', $nota)}}" method="POST" class="d-inline">
+                          @method('DELETE')
+                          @csrf
+                          <button class="btn btn-danger btn-sm" type="submit" >Eliminar Nota </button>
+                        </form>
+                    </td>
                   </tr>
                   @endforeach 
                 </tbody>

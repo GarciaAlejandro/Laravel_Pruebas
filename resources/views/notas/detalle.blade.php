@@ -1,9 +1,9 @@
 @extends('plantilla')
 
 @section('seccion')
-<h1> Detalle de nota: </h1>
-<h4>id: {{$nota->id}}</h4>
-<h4>Nombre: {{$nota->nombre}}</h4>
-<h4>Detalle: {{$nota->descripción}}</h4>
-
+<h1>Nota Detalle</h1>
+<hr />
+<h4>Id: {{ $nota->id }}</h4>
+<h4>Nombre: {{ $nota->nombre }}</h4>
+<h4>Descripción: {{ $nota->descripción }}</h4>
 @endsection

@@ -30,6 +30,33 @@ class PagesController extends Controller
         return view('notas.detalle', compact('nota'));
     }
 
+    // Es enviado el formulario a través del método REQUEST 
+    public function crearNota(Request $request){
+        // {
+        // "nombre": Alejandro
+        // "descripción": test
+        //}
+
+        //return $request->all;
+
+        // Se crea un nuevo objeto con el modelo Nota
+        $notaNueva = new App\Nota;
+        $notaNueva->nombre = $request->nombre;
+        $notaNueva->descripción  = $request->descripción;
+        $notaNueva->save();
+
+        // regresa la página anterior
+        return back()->with('mensaje','Nota agregada');
+    }
+
+    public function eliminarNota($id){
+        $notaEliminar = App\Nota::findOrFail($id);
+        // Se elimina la nota por el método
+        $notaEliminar->delete();
+        return back()->with('mensaje', 'Nota eliminada');
+
+    }
+
     public function fotos(){
         return view('fotos');
     }

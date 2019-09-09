@@ -16,7 +16,11 @@
 
 Route::get('/', 'PagesController@inicio')->name('inicio');
 
-Route::get('/detalle/{id}', 'PagesController@detalle')->name('notas.detalle');
+Route::get('detalle/{id}', 'PagesController@detalle')->name('notas.detalle');
+
+Route::post( '/' , 'PagesController@crearNota')->name('notas.crear');
+
+Route::delete('eliminar/{id}','PagesController@eliminarNota')->name('notas.eliminar');
 
 /* 
 |
