@@ -1,3 +1,6 @@
+@extends('plantilla')
+
+@section('seccion')
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,9 +11,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-body{
-background: #CECECE;
-}
+       html, body {
+           background-color: #000;
+           color: #FFF;
+           font-family: 'Nunito', sans-serif;
+           font-weight: 200;
+           height: 100vh;
+           margin: 0;
+       }
+
+       table{
+         background-color: #CDCDCD;
+         font-weight: bold;
+         font-size: large;
+
+       }
+       .display-4{
+         text-align: center;
+       }
 </style>
     <title>Hello, world!</title>
   </head>
@@ -33,12 +51,12 @@ background: #CECECE;
               <!-- * Necesario type submit, al presionar ejecuta action=" "-->
               <button class="btn btn-primary btn-block" type="submit">Agregar Nota</button>
             </form>
-
+            <br>
             <table class="table">
                 <thead>
                   <tr>
                    <!-- <th scope="col">id</th> -->
-                    <th scope="col">Nombre</th>
+                    <th scope="col" >Nombre</th>
                     <th scope="col">Descripción</th>
                   </tr>
                 </thead>
@@ -79,3 +97,4 @@ background: #CECECE;
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+@endsection

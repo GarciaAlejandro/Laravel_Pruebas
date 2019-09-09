@@ -19,6 +19,11 @@ class PagesController extends Controller
         return view('Novia');
     }
 
+    public function notas(){
+        $notas = App\Nota::all();
+        return view('welcome', compact('notas'));
+    }
+
     public function noticias(){
         return view('blog');
     }

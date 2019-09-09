@@ -9,7 +9,7 @@
            <!-- Fonts -->
            <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-           <!-- Styles -->
+           <!-- Styles  636b6F -->
            <style>
                html, body {
                    background-color: #000;
@@ -30,7 +30,8 @@
      <!-- "el contenido de href es el nombre de la página"-->
     <a href="{{ route('foto')  }}" class="btn btn-primary"> Fotos</a>
      <a href="{{route('noticias')}}" class="btn btn-primary"> Blog</a>     
-     <a href="{{route('nosotros')}}" class="btn btn-primary"> Nosotros</a>     
+     <a href="{{route('nosotros')}}" class="btn btn-primary"> Nosotros</a>
+     <a href="{{route('notas')}}" class="btn btn-primary"> Notas</a>     
     </div> 
      
    <div class="container">

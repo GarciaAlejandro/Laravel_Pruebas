@@ -16,6 +16,8 @@
 
 Route::get('/', 'PagesController@inicio')->name('inicio');
 
+Route::get('/notas', 'PagesController@notas')->name('notas');
+
 Route::get('detalle/{id}', 'PagesController@detalle')->name('notas.detalle');
 
 Route::post( '/' , 'PagesController@crearNota')->name('notas.crear');
