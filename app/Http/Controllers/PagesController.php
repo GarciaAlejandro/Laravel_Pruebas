@@ -27,7 +27,7 @@ class PagesController extends Controller
         // validación de existencia de id, caso contrario error 404
         $nota = App\Nota::findOrFail($id);
 
-        return view('notas.detalle', compact('nota');
+        return view('notas.detalle', compact('nota'));
     }
 
     public function fotos(){
